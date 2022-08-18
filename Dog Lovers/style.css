@@ -1,0 +1,75 @@
+
+form{
+    width:100%;
+    display:inline-flex;
+    justify-content:space-around;
+    padding: 50px 0;
+    background-image: linear-gradient(-90deg, floralwhite, azure);
+}
+
+#dog-breeds{
+    min-width:150px;
+    width:30%;
+    padding:10px;
+}
+#dog-breeds option {
+    padding: 10px;
+    font-size: 1.5rem;
+}
+form label {
+    padding: 5px 0;
+    font-size:1.5rem;
+}
+
+form input {
+    padding: 5px;
+}
+button {
+    width: 150px;
+    height: 40px;
+    font-family: monospace;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 0px 0px 30px 2px grey;
+}
+#flex{
+    display:flex;
+    margin-top:50px;
+    height:400px;
+    padding:20px;
+    align-items:center;
+    justify-content:space-around;
+}
+#breed-image {
+    width: 60%;
+    min-width: 150px;
+    overflow: hidden;
+    min-height:400px;
+}
+
+
+#breed-image img{
+    width:100%;
+    height:100%;
+    max-height: 400px;
+}
+
+#next {
+    width: auto; 
+}
+
+#next a {
+    font-size: 1.5rem;
+    color: skyblue;
+    text-decoration: none;
+    border: 1px solid lightgrey;
+    padding: 10px 20px;
+}
+
+#next a:hover {
+    box-shadow: 0px 0px 10px lightblue;
+    text-shadow: 0px 0px 5px lightblue;
+}
