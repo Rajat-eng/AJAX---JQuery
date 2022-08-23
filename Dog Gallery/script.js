@@ -3,6 +3,7 @@ var dropdown = $("#dog-breeds");
 
 $.get("https://dog.ceo/api/breeds/list/all", function (data, status) {
     let dogBreeds = data.message;
+    console.log(dogBreeds);
     for (let breed in dogBreeds) {
         dropdown.append(`<option value="${breed}">${breed}</option>`);
     }
@@ -19,19 +20,19 @@ dropdown.change(function () {
 
         if (data.message.length !== 0) {
             let subBreeds = data.message;
+            console.log(subBreeds);
 
             dropdown.after('<select id="dog-sub-breeds"></select>');
 
             var subDropdown = $("#dog-sub-breeds");
 
             for (let subBreed of subBreeds) {
-                subDropdown.append(`<option value="${subBreed}">${subBreed}</option>`);
-                console.log(subBreed);
+                subDropdown.append(`<option value="${subBreed}">${subBreed}</option>`); 
             }
         }
 
     });
-    console.log(url);
+    //console.log(url);
 });
 
 $("form button").click(function (e) {

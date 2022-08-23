@@ -1,7 +1,7 @@
 var breedImage = $("#breed-image");
 var dropdown = $("#dog-breeds");
-var allowSubmit = true;
 var breed;
+
 
 $.get("https://dog.ceo/api/breeds/list/all", function (data, status) {
     let dogBreeds = data.message;
@@ -11,18 +11,11 @@ $.get("https://dog.ceo/api/breeds/list/all", function (data, status) {
     }
 });
 
-dropdown.change(function () {
-    allowSubmit = true;
-});
 
 $("form button").click(function (e) {
     e.preventDefault();
-
-    if (allowSubmit) {
-        breed = dropdown.val();
-        displayDog(breed);
-        allowSubmit = false;
-    }
+    breed = dropdown.val();
+    displayDog(breed);
 
 });
 
